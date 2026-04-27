@@ -1,16 +1,17 @@
 {
-  "homepage": "http://aldrickbodios.github.io/math-quiz-game",
+  "homepage": "https://aldrickbodios.github.io/math-quiz-app/",
   "name": "math-quiz-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^19.2.5",
