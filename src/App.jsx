@@ -32,13 +32,15 @@ const App = () => {
         lives: nextLives
       }))
 
-      if (nextLives <= 0)
+      if (nextLives <= 0) {
+        alert("Game Over!");
         handleGameOver()
+      }
     }
   }
 
   const handleGameOver = () => {
-    alert("Game Over!");
+    
       setRunning(false);
       setStats({
         lives: 5,

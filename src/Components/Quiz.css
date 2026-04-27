@@ -16,6 +16,12 @@
     font-weight: bold;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .stat {
     display: flex;
     gap: 20px;
@@ -85,4 +91,11 @@ p {
 
 .input-panel button:hover {
     background: rgb(32, 36, 151);
+}
+
+@media screen and (max-width: 768px) and (pointer: coarse) {
+    .container {
+        width: 480px;
+        margin-top: 60px;
+    }
 }

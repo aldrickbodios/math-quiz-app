@@ -35,3 +35,9 @@ button {
 button:hover {
     background: rgb(32, 36, 151);
 }
+
+@media screen and (max-width: 768px) and (pointer: coarse){
+    .panel {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import './Quiz.css'
-import { IoMdTimer } from "react-icons/io";
+import { IoMdTimer, IoMdClose } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 
 const Quiz = ({onWrong, onCorrect, endGame, stats, config}) => {
@@ -73,6 +73,7 @@ const Quiz = ({onWrong, onCorrect, endGame, stats, config}) => {
         useEffect(() => {
             if (time === 0) {
                 if (config.mode === "Minute") {
+                    alert("Time's Up!");
                     endGame();
                     return;
                 }
@@ -125,7 +126,13 @@ const Quiz = ({onWrong, onCorrect, endGame, stats, config}) => {
 
     return (
         <div className="container">
-            <h1>Math Tricks</h1>
+            <header>
+                <h1>Math Tricks</h1>
+                <IoMdClose size="20px" style={{cursor: 'pointer'}} onClick = {() => {
+                    if (confirm("Are you sure you want to exit?"))
+                        endGame();
+                }} />
+            </header>
             <div className="topbar">
                 <div className="stat">
                     <span>Level {level}</span>
