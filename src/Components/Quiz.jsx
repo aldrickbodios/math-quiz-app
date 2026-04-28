@@ -14,7 +14,7 @@ const Quiz = ({onWrong, onCorrect, endGame, stats, config}) => {
 
     const generateQuestion = () => {
         const max = 10 + Math.floor((level-1) / 2) * 5;
-        const min = (level >= 5) ? Math.floor(1 + (level-5) / 2 * 5) : 1;
+        const min = (level >= 5) ? Math.floor(1 + ((level-5) / 2) * 5) : 1;
         let a, b;
         a = (Math.floor(Math.random() * max) + min);
         switch (config.operation) {
