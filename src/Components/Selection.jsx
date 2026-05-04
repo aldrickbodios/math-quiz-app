@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import './Selection.css'
 
 const Selection = ({onStartGame}) => {
+
     const [settings, setSettings] = useState({
         operation: '+',
         factor: 2,
@@ -89,7 +90,10 @@ const Selection = ({onStartGame}) => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => onStartGame(settings)}>Start</button>
+            <button onClick={() => {
+                onStartGame(settings)
+                console.log(settings)
+                }}>Start</button>
         </div>
     )
 }
